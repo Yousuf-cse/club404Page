@@ -1,120 +1,170 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;700;900&display=swap');
 
-@custom-variant dark (&:is(.dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-}
 
-:root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
+@layer base {
+  :root {
+    --background: 220 13% 8%;
+    --foreground: 0 0% 95%;
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+    --card: 220 13% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 13% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 25 95% 55%;
+    --primary-foreground: 220 13% 8%;
+
+    --secondary: 220 13% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 25 95% 55%;
+    --accent-foreground: 220 13% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 18%;
+    --ring: 25 95% 55%;
+
+    --radius: 0rem;
+
+
+    --concrete: 220 13% 25%;
+    --concrete-dark: 220 13% 15%;
+    --electric: 25 95% 55%;
+    --neon-green: 120 100% 50%;
+    --cyber-blue: 200 100% 60%;
+    
+   
+    --gradient-brutal: linear-gradient(135deg, hsl(var(--background)), hsl(var(--concrete-dark)));
+    --gradient-electric: linear-gradient(90deg, hsl(var(--electric)), hsl(var(--neon-green)));
+    
+    
+    --shadow-brutal: 8px 8px 0px hsl(var(--electric));
+    --shadow-harsh: 4px 4px 0px hsl(var(--concrete));
+    --shadow-neon: 0 0 20px hsl(var(--electric) / 0.5);
+
+   
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-display: 'Space Grotesk', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  
+  .btn-brutal {
+    @apply bg-primary text-primary-foreground px-6 py-3 font-mono font-bold uppercase tracking-wider transform transition-all duration-200 hover:translate-x-1 hover:translate-y-1;
+    box-shadow: var(--shadow-brutal);
+    border: 3px solid hsl(var(--foreground));
+  }
+  
+  .btn-brutal:hover {
+    box-shadow: 4px 4px 0px hsl(var(--electric));
+  }
+  
+  
+  .card-brutal {
+    @apply bg-card border-4 border-foreground p-6 transform transition-all duration-300;
+    box-shadow: var(--shadow-harsh);
+  }
+  
+  .card-brutal:hover {
+    @apply translate-x-1 translate-y-1;
+    box-shadow: var(--shadow-brutal);
+  }
+  
+  
+  .divider-brutal {
+    @apply h-1 w-full bg-gradient-to-r from-electric to-neon-green;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  }
+  
+  
+  .terminal-block {
+    @apply bg-concrete border-4 border-electric p-4 font-mono relative;
+    box-shadow: var(--shadow-neon);
+  }
+  
+  .terminal-block::before {
+    content: "> ";
+    @apply text-electric;
   }
 }
