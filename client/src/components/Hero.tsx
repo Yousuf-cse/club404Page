@@ -17,31 +17,31 @@ export default function Hero () {
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <div className="terminal-block mb-8 text-left max-w-2xl mx-auto">
-          <span className="text-neon-green">~/aliah-university/club-404$</span>
-          <span className="text-foreground"> ls -la</span>
+          <span className="text-neon-green cursor-default">~/aliah-university/club-404$</span>
+          <span className="text-foreground cursor-default"> ls -la</span>
         </div>
         
-        <h1 className="font-display font-black text-6xl md:text-8xl lg:text-9xl mb-4 text-foreground">
-          club<span className="text-electric">404</span>
+        <h1 className="font-display font-black text-6xl md:text-8xl lg:text-9xl mb-4 text-foreground cursor-default">
+          club<span className="text-electric cursor-default">404</span>
         </h1>
         
         <div className="divider-brutal mb-8"></div>
         
-        <p className="font-mono text-lg md:text-xl text-muted-foreground mb-2 uppercase tracking-wider">
+        <p className="font-mono text-lg md:text-xl text-muted-foreground mb-2 uppercase tracking-wider cursor-default">
           Coding Club • Aliah University
         </p>
-        <p className="font-mono text-lg md:text-xl text-muted-foreground mb-8 uppercase tracking-wider">
+        <p className="font-mono text-lg md:text-xl text-muted-foreground mb-8 uppercase tracking-wider cursor-default">
           New Town, Kolkata
         </p>
         
         <div className="terminal-block mb-12 text-left max-w-3xl mx-auto">
-          <div className="text-foreground mb-2">
+          <div className="text-foreground mb-2 cursor-default">
             We code. We create. We innovate.
           </div>
-          <div className="text-foreground mb-2">
+          <div className="text-foreground mb-2 cursor-default">
             Building the future one line at a time.
           </div>
-          <div className="text-electric">
+          <div className="text-electric cursor-default">
             Error 404: Limits not found.
           </div>
         </div>
