@@ -98,7 +98,7 @@ const WelcomeScreen = ({ onComplete }: WelcomeScreenProps) => {
               initial={{ scale: 0, rotate: 0 }}
               animate={{ scale: 1, rotate: 360 }}
               transition={{ duration: 2, type: "spring" }}
-              className="absolute top-20 left-20 w-16 h-16 bg-electric border-4 border-foreground"
+              className="absolute top-20 left-20 w-16 h-16 bg-primary border-4 border-foreground"
             />
             <motion.div
               initial={{ scale: 0, rotate: 0 }}
@@ -116,7 +116,7 @@ const WelcomeScreen = ({ onComplete }: WelcomeScreenProps) => {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 1.5, delay: 1.2 }}
-              className="absolute top-1/2 right-10 w-32 h-4 bg-electric transform rotate-45 origin-left"
+              className="absolute top-1/2 right-10 w-32 h-4 bg-primary transform rotate-45 origin-left"
             />
           </>
         )}
@@ -132,20 +132,20 @@ const WelcomeScreen = ({ onComplete }: WelcomeScreenProps) => {
           className="terminal-block mb-8 max-w-2xl mx-auto"
         >
           <div className="flex items-center justify-between mb-4 pb-2 border-b-2 border-foreground">
-            <span className="text-neon-green text-sm">~/welcome$</span>
+            <span className="text-primary text-sm">~/welcome$</span>
             <div className="flex space-x-2">
-              <div className="w-3 h-3 rounded-full bg-red-500 border border-foreground"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500 border border-foreground"></div>
+              <div className="w-3 h-3 rounded-full bg-blue-400 border border-foreground"></div>
+              <div className="w-3 h-3 rounded-full bg-white border border-foreground"></div>
               <div className="w-3 h-3 rounded-full bg-green-500 border border-foreground"></div>
             </div>
           </div>
           
           <div className="text-left">
-            <span className="text-neon-green">visitor@aliah:~$</span>
+            <span className="text-primary">visitor@aliah:~$</span>
             <span className="text-foreground ml-2">echo "Loading..."</span>
             <div className="mt-2 text-muted-foreground">Loading...</div>
             <div className="mt-4">
-              <span className="text-neon-green">visitor@aliah:~$</span>
+              <span className="text-primary">visitor@aliah:~$</span>
               <span className="text-foreground ml-2">initialize</span>
             </div>
           </div>
@@ -158,13 +158,13 @@ const WelcomeScreen = ({ onComplete }: WelcomeScreenProps) => {
           transition={{ duration: 1, delay: 1 }}
           className="relative"
         >
-          <h1 className="font-display text-neon-green text-6xl md:text-7xl lg:text-[10rem] relative">
+          <h1 className="font-display font-black text-6xl md:text-7xl lg:text-[10rem] text-foreground relative">
             {currentText}
             {showCursor && (
               <motion.span
                 animate={{ opacity: [0, 1, 0] }}
                 transition={{ duration: 0.5, repeat: Infinity }}
-                className="text-white"
+                className="text-primary"
               >
                 |
               </motion.span>
@@ -185,7 +185,7 @@ const WelcomeScreen = ({ onComplete }: WelcomeScreenProps) => {
                   repeat: Infinity,
                   repeatDelay: 2 
                 }}
-                className="font-display font-black text-8xl md:text-9xl lg:text-[12rem] text-white absolute inset-0"
+                className="font-display font-black text-8xl md:text-9xl lg:text-[12rem] text-primary absolute inset-0"
               >
                 <span>Club</span> {fullText}
               </motion.h1>
@@ -240,7 +240,7 @@ const WelcomeScreen = ({ onComplete }: WelcomeScreenProps) => {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-              className="w-8 h-8 border-4 border-foreground border-t-electric"
+              className="w-8 h-8 border-4 border-foreground border-t-primary"
             ></motion.div>
           </div>
         </motion.div>
@@ -271,7 +271,7 @@ const WelcomeScreen = ({ onComplete }: WelcomeScreenProps) => {
           ease: "easeInOut",
           delay: 1 
         }}
-        className="absolute bottom-32 left-32 w-8 h-8 bg-electric border-2 border-foreground"
+        className="absolute bottom-32 left-32 w-8 h-8 bg-primary border-2 border-foreground"
       />
     </motion.div>
   );

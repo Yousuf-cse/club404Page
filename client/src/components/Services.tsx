@@ -44,7 +44,7 @@ export default function Services () {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground cursor-default">
-              What We <span className="text-electric">Do</span>
+              What We <span className="text-electric">Conduct</span>
             </h2>
             
             <div className="terminal-block max-w-2xl mx-auto">
