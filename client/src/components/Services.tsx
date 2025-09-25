@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 export default function Services () {
   const services =[
   {
@@ -39,26 +41,48 @@ export default function Services () {
 ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-20 bg-background relative overflow-hidden">
+    
+      <div className="absolute inset-0">
+        <div className="absolute top-16 right-16 w-36 h-36 bg-neon-green/5 border-2 border-neon-green/20 transform rotate-12"></div>
+        <div className="absolute bottom-16 left-16 w-24 h-24 bg-cyber-blue/5 border-2 border-cyber-blue/20 transform -rotate-12"></div>
+        <div className="absolute top-1/2 right-1/3 w-2 h-44 bg-electric/10 transform rotate-45"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-18 h-18 bg-neon-green/3 border border-neon-green/30 transform rotate-45"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground cursor-default">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground">
               What We <span className="text-electric">Conduct</span>
             </h2>
             
             <div className="terminal-block max-w-2xl mx-auto">
-              <div className="text-foreground cursor-default">
+              <div className="text-foreground">
                 {"club404.services.forEach(service => console.log(service))"}
               </div>
             </div>
             
             <div className="divider-brutal mt-8"></div>
-          </div>
+          </motion.div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="card-brutal group cursor-pointer">
+              <motion.div 
+                key={index} 
+                className="card-brutal group"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02, y: -5 }}
+              >
                 <div className="flex items-start justify-between mb-4">
                   <h3 className={`font-display font-bold text-xl ${
                     service.accent === 'electric' ? 'text-electric' : 
@@ -89,7 +113,7 @@ export default function Services () {
                   service.accent === 'neon-green' ? 'bg-neon-green' : 
                   'bg-cyber-blue'
                 } transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}></div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
