@@ -1,15 +1,30 @@
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function Contact () {
   return (
-    <section id="contact" className="py-20 bg-concrete-dark">
-      <div className="container mx-auto px-4">
+   <section id="contact" className="py-20 bg-concrete-dark relative overflow-hidden">
+      
+      <div className="absolute inset-0">
+        <div className="absolute top-12 left-12 w-32 h-32 bg-electric/5 border-2 border-electric/20 transform rotate-12"></div>
+        <div className="absolute bottom-12 right-12 w-28 h-28 bg-cyber-blue/5 border-2 border-cyber-blue/20 transform -rotate-12"></div>
+        <div className="absolute top-2/3 left-1/3 w-2 h-36 bg-neon-green/10 transform rotate-45"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-16 h-16 bg-electric/3 border border-electric/30 transform rotate-45"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground cursor-default">
-            Join The <span className="text-electric">Revolution</span>
-          </h2>
-          
-          <div className="terminal-block mb-8 text-left max-w-2xl mx-auto cursor-default">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground">
+              Join The <span className="text-electric">Revolution</span>
+            </h2>
+            
+            <div className="terminal-block mb-8 text-left max-w-2xl mx-auto">
             <div className="text-neon-green">
               $ club404 --connect
             </div>
@@ -25,10 +40,21 @@ export default function Contact () {
             Ready to level up your coding skills? Join club404 and be part of 
             Aliah University's most innovative tech community.
           </p>
+          </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="card-brutal text-left cursor-pointer">
-              <h3 className="font-display font-bold text-xl text-electric mb-3">
+          <motion.div 
+            className="grid md:grid-cols-3 gap-8 mb-12"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <motion.div 
+              className="card-brutal text-left group"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <h3 className="font-display font-bold text-xl text-electric mb-3 group-hover:text-foreground transition-colors">
                 Location
               </h3>
               <div className="font-mono text-muted-foreground cursor-text">
@@ -36,10 +62,15 @@ export default function Contact () {
                 <div>New Town, Kolkata</div>
                 <div>West Bengal, India</div>
               </div>
-            </div>
+            <div className="mt-4 h-1 w-full bg-electric transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            </motion.div>
             
-            <div className="card-brutal text-left cursor-pointer">
-              <h3 className="font-display font-bold text-xl text-neon-green mb-3">
+            <motion.div 
+              className="card-brutal text-left group"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <h3 className="font-display font-bold text-xl text-neon-green mb-3 group-hover:text-foreground transition-colors">
                 Connect
               </h3>
               <div className="font-mono text-muted-foreground space-y-2 cursor-text">
@@ -47,28 +78,40 @@ export default function Contact () {
                 <div>x: @club404aliah</div>
                 <div>Instagram: @club404aliah.official</div>
               </div>
-            </div>
+           <div className="mt-4 h-1 w-full bg-neon-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            </motion.div>
             
-            <div className="card-brutal text-left cursor-pointer">
-              <h3 className="font-display font-bold text-xl text-cyber-blue mb-3">
+              <motion.div 
+              className="card-brutal text-left group"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <h3 className="font-display font-bold text-xl text-cyber-blue mb-3 group-hover:text-foreground transition-colors">
                 Meet Up
               </h3>
               <div className="font-mono text-muted-foreground space-y-2">
                 <div>Coming Soon</div>
               </div>
-            </div>
-          </div>
+             <div className="mt-4 h-1 w-full bg-cyber-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            </motion.div>
+          </motion.div>
           
           <div className="divider-brutal mb-8"></div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
             <Button className="btn-brutal text-lg px-8 py-4">
               Join Discord
             </Button>
             <Button variant="outline" className="font-mono font-bold uppercase tracking-wider bg-transparent border-4 border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-4">
               Upcoming Events
             </Button>
-          </div>
+          </motion.div>
           
           <div className="terminal-block mt-12 text-left max-w-xl mx-auto cursor-default">
             <div className="text-foreground">
