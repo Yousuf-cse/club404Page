@@ -4,7 +4,8 @@ import { useToast } from "@/hooks/use-toast";
 
 export default function Contact () {
 
-   const { toast } = useToast();
+  const { toast } = useToast();
+  const discordLink = "https://discord.gg/jSAkqbdeu7"
 
   const handleComingSoon = (feature: string) => {
     toast({
@@ -117,9 +118,11 @@ export default function Contact () {
             transition={{ duration: 1.5, delay: 0.5 }}
             viewport={{ once: true }}
           >
+            <a href={discordLink} target="_blank" rel="noopener noreferrer">
             <Button className="btn-brutal text-lg px-8 py-4">
               Join Discord
             </Button>
+            </a>
             <Button 
               variant="outline" 
               className="font-mono font-bold uppercase tracking-wider bg-transparent border-4 border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-4"
