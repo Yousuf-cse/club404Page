@@ -8,6 +8,15 @@ export default function Team() {
   const [imageErrors, setImageErrors] = useState(new Set());
 
   const teamMembers = [
+     {
+      name: "Ramiz",
+      expertise: " ",
+      linkedin: "https://www.linkedin.com/in/",
+      github: "https://github.com/",
+      accent: "cyber-blue",
+      image: "",
+      gender: "male"
+    },
     {
       name: "Rezaul Hossain",
       expertise: "Hardware",
