@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion"
-import heroImage from "@/assets/hero-coding.jpg";
 
 export default function Hero () {
 
+  const heroImage = "https://res.cloudinary.com/dxkje9whm/image/upload/v1758892770/hero-coding_l796ty.jpg"
   const whatsAppLink = "https://chat.whatsapp.com/EOR7RBOol6AGHNf0IdhpZI";
 
   const { toast } = useToast();

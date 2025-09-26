@@ -23,7 +23,7 @@ export default function Header () {
           >
           <HashLink smooth to="#hero" className="flex items-center space-x-3">
              <motion.img 
-              src="/src/assets/club-404-logo.jpg" 
+              src="https://res.cloudinary.com/dxkje9whm/image/upload/v1758892567/Club-404-logo_gfnhkb.jpg" 
               alt="Club 404 Logo" 
               className="w-10 h-10 rounded-lg border-2 border-primary"
               whileHover={{ scale: 1.1, rotate: 5 }}

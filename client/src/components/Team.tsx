@@ -14,13 +14,13 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/razaul-shoaib-ba192b330/",
       github: "https://github.com/",
       accent: "electric",
-      image: "/images/team/rezaul.png",
+      image: "https://res.cloudinary.com/dxkje9whm/image/upload/v1758892639/Screenshot_261_emxplm.png",
       gender: "male"
     },
     {
       name: "Md Yousuf Mallik",
       expertise: "Full stack & Android",
-      linkedin: "https://www.linkedin.com/in/yousuf-mallik", 
+      linkedin: "https://res.cloudinary.com/dxkje9whm/image/upload/v1758892593/yousuf_n1xsid.jpg", 
       github: "https://github.com/Yousuf-cse",
       accent: "neon-green",
       image: "/images/team/yousuf.jpg",
@@ -32,7 +32,7 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/sharabati-bose-3550b0318/",
       github: "https://github.com/", 
       accent: "cyber-blue",
-      image: "/images/team/sharabati.jpg",
+      image: "https://res.cloudinary.com/dxkje9whm/image/upload/v1758892618/sharabati_jif4ji.jpg",
       gender: "female"
     },
     {
@@ -41,7 +41,7 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/inzamam-siddiqui-854a73385?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
       github: "https://github.com/",
       accent: "electric",
-      image: "/images/team/inzamam.jpg",
+      image: "https://res.cloudinary.com/dxkje9whm/image/upload/v1758892609/inzamam_onm43s.jpg",
       gender: "male"
     },
     {
@@ -50,7 +50,7 @@ export default function Team() {
       linkedin: "www.linkedin.com/in/isam-ali-b49185384",
       github: "https://github.com/isamm-ali",
       accent: "neon-green",
-      image: "/images/team/isam.jpg",
+      image: "",
       gender: "male"
     },
     {
@@ -59,7 +59,7 @@ export default function Team() {
       linkedin: "https://linkedin.com/in/",
       github: "https://github.com/",
       accent: "cyber-blue",
-      image: "/images/team/farhat.jpg",
+      image: "",
       gender: "female"
     },
     {
@@ -68,7 +68,7 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/raghib-ahmad-27hg/",
       github: "https://github.com/",
       accent: "electric",
-      image: "/images/team/raghib.jpg",
+      image: "",
       gender: "male"
     },
     {
@@ -77,7 +77,7 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/warisha-noushad-61335a386?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app  ",
       github: "https://github.com/codebywn",
       accent: "neon-green",
-      image: "/images/team/warisha.jpg",
+      image: "",
       gender: "female"
     },
     {
@@ -86,7 +86,7 @@ export default function Team() {
       linkedin: "https://linkedin.com/in/",
       github: "https://github.com/",
       accent: "cyber-blue",
-      image: "/images/team/karan.jpg",
+      image: "",
       gender: "male"
     },
     {
@@ -95,7 +95,7 @@ export default function Team() {
       linkedin: "https://linkedin.com/in/",
       github: "https://github.com/",
       accent: "electric",
-      image: "/images/team/tapojoyti.jpg",
+      image: "",
       gender: "male"
     },
   ];
@@ -103,8 +103,8 @@ export default function Team() {
   // Function to get fallback avatar based on gender
   const getAvatarImage = (member) => {
     const fallbackAvatars = {
-      male: "/images/team/maleAvatar.png",
-      female: "/images/team/femaleAvatar.png"
+      male: "https://res.cloudinary.com/dxkje9whm/image/upload/v1758892609/maleAvatar_ca5wog.png",
+      female: "https://res.cloudinary.com/dxkje9whm/image/upload/v1758892592/femaleAvatar_gr6rno.png"
     };
     return fallbackAvatars[member.gender] || fallbackAvatars.male;
   };
