@@ -57,7 +57,7 @@ export default function About () {
               viewport={{ once: true }}
             >
               <motion.div 
-                className="card-brutal group"
+                className="card-brutal group cursor-pointer"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -72,7 +72,7 @@ export default function About () {
               </motion.div>
               
              <motion.div 
-                className="card-brutal group"
+                className="card-brutal group cursor-pointer"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -87,7 +87,7 @@ export default function About () {
               </motion.div>
               
              <motion.div 
-                className="card-brutal group"
+                className="card-brutal group cursor-pointer"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >

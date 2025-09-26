@@ -151,11 +151,11 @@ export default function Team() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground">
+            <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground cursor-default">
               Core <span className="text-electric">Team</span>
             </h2>
             
-            <div className="terminal-block mb-16 text-left max-w-2xl mx-auto">
+            <div className="terminal-block mb-16 text-left max-w-2xl mx-auto cursor-default">
               <div className="text-neon-green">
                 $ club404.team.display()
               </div>
@@ -250,7 +250,7 @@ export default function Team() {
                       'bg-cyber-blue'
                     } border-2 border-white transform rotate-45 mb-6`}></div>
                     
-                    <h3 className={`font-display font-bold text-2xl mb-2 ${
+                    <h3 className={`font-display font-bold text-2xl mb-2 cursor-default ${
                       currentTeamMember.accent === 'electric' ? 'text-electric' : 
                       currentTeamMember.accent === 'neon-green' ? 'text-neon-green' : 
                       'text-cyber-blue'
@@ -258,7 +258,7 @@ export default function Team() {
                       {currentTeamMember.name}
                     </h3>
                     
-                    <p className="font-mono text-sm text-white mb-6 drop-shadow-md">
+                    <p className="font-mono text-sm text-white mb-6 drop-shadow-md cursor-default">
                       {currentTeamMember.expertise}
                     </p>
                   </div>
@@ -307,7 +307,7 @@ export default function Team() {
             ))}
           </div>
 
-          <div className="terminal-block mt-12 text-left max-w-xl mx-auto">
+          <div className="terminal-block mt-12 text-left max-w-xl mx-auto cursor-default">
             <div className="text-foreground">
               {"> Team member {currentMember + 1} of {teamMembers.length}"}
             </div>

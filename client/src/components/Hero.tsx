@@ -67,12 +67,12 @@ export default function Hero () {
         </motion.div>
         
          <motion.h1 
-          className="font-display font-black text-6xl md:text-8xl lg:text-9xl mb-4 text-foreground"
+          className="font-display font-black text-6xl md:text-8xl lg:text-9xl mb-4 text-foreground cursor-default"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          club<span className="text-electric cursor-default">404</span>
+          Club<span className="text-electric">404</span>
         </motion.h1>
         
          <motion.div 

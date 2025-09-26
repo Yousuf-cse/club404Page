@@ -33,11 +33,11 @@ export default function Contact () {
             transition={{ duration: 1.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground">
+            <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground cursor-default">
               Join The <span className="text-electric">Revolution</span>
             </h2>
             
-            <div className="terminal-block mb-8 text-left max-w-2xl mx-auto">
+            <div className="terminal-block mb-8 text-left max-w-2xl mx-auto cursor-default">
             <div className="text-neon-green">
               $ club404 --connect
             </div>
@@ -67,7 +67,7 @@ export default function Contact () {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h3 className="font-display font-bold text-xl text-electric mb-3 group-hover:text-foreground transition-colors">
+              <h3 className="font-display font-bold text-xl text-electric mb-3 group-hover:text-foreground transition-colors cursor-default">
                 Location
               </h3>
               <div className="font-mono text-muted-foreground cursor-text">
@@ -83,7 +83,7 @@ export default function Contact () {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h3 className="font-display font-bold text-xl text-neon-green mb-3 group-hover:text-foreground transition-colors">
+              <h3 className="font-display font-bold text-xl text-neon-green mb-3 group-hover:text-foreground transition-colors cursor-default">
                 Connect
               </h3>
               <div className="font-mono text-muted-foreground space-y-2 cursor-text">
@@ -99,10 +99,10 @@ export default function Contact () {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h3 className="font-display font-bold text-xl text-cyber-blue mb-3 group-hover:text-foreground transition-colors">
+              <h3 className="font-display font-bold text-xl text-cyber-blue mb-3 group-hover:text-foreground transition-colors cursor-default">
                 Meet Up
               </h3>
-              <div className="font-mono text-muted-foreground space-y-2">
+              <div className="font-mono text-muted-foreground space-y-2 cursor-default">
                 <div>Coming Soon</div>
               </div>
              <div className="mt-4 h-1 w-full bg-cyber-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

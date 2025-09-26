@@ -59,12 +59,12 @@ export default function Services () {
             transition={{ duration: 1.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground">
+            <h2 className="font-display font-black text-4xl md:text-6xl mb-6 text-foreground cursor-default">
               What We <span className="text-electric">Conduct</span>
             </h2>
             
             <div className="terminal-block max-w-2xl mx-auto">
-              <div className="text-foreground">
+              <div className="text-foreground cursor-default">
                 {"club404.services.forEach(service => console.log(service))"}
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Services () {
             {services.map((service, index) => (
               <motion.div 
                 key={index} 
-                className="card-brutal group"
+                className="card-brutal group cursor-pointer"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, delay: index * 0.1 }}
