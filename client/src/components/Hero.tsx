@@ -5,6 +5,8 @@ import heroImage from "@/assets/hero-coding.jpg";
 
 export default function Hero () {
 
+  const whatsAppLink = "https://chat.whatsapp.com/EOR7RBOol6AGHNf0IdhpZI";
+
   const { toast } = useToast();
 
   const handleComingSoon = (feature: string) => {
@@ -116,9 +118,11 @@ export default function Hero () {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.6 }}
         >
+          <a href={whatsAppLink} target="_blank" rel="noopener noreferrer">
           <Button className="btn-brutal text-lg px-8 py-4">
             Join The Club
           </Button>
+          </a>
           <Button 
             variant="outline" 
             className="font-mono font-bold uppercase tracking-wider bg-transparent border-4 border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-4"

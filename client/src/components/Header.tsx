@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 export default function Header () {
 
+  const whatsAppLink = "https://chat.whatsapp.com/EOR7RBOol6AGHNf0IdhpZI";
+
   return (
      <motion.header 
       className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b-4 border-primary"
@@ -75,9 +77,11 @@ export default function Header () {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
+            <a href={whatsAppLink} target="_blank" rel="noopener noreferrer">
           <Button className="btn-brutal ">
             Join Now
           </Button>
+          </a>
           </motion.div>
         </div>
       </div>

@@ -1,7 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Contact () {
+
+   const { toast } = useToast();
+
+  const handleComingSoon = (feature: string) => {
+    toast({
+      title: "Coming Soon!",
+      description: `${feature} will be listed soon`,
+      duration: 3000,
+    });
+  };
+
   return (
    <section id="contact" className="py-20 bg-concrete-dark relative overflow-hidden">
       
@@ -108,7 +120,11 @@ export default function Contact () {
             <Button className="btn-brutal text-lg px-8 py-4">
               Join Discord
             </Button>
-            <Button variant="outline" className="font-mono font-bold uppercase tracking-wider bg-transparent border-4 border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-4">
+            <Button 
+              variant="outline" 
+              className="font-mono font-bold uppercase tracking-wider bg-transparent border-4 border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-4"
+              onClick= { () => handleComingSoon("Upcoming events")}
+              >
               Upcoming Events
             </Button>
           </motion.div>
