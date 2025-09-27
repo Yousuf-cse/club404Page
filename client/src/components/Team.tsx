@@ -29,10 +29,10 @@ export default function Team() {
     {
       name: "Md Yousuf Mallik",
       expertise: "Full stack & Android",
-      linkedin: "https://res.cloudinary.com/dxkje9whm/image/upload/v1758892593/yousuf_n1xsid.jpg", 
+      linkedin: "https://www.linkedin.com/in/yousuf-mallik/", 
       github: "https://github.com/Yousuf-cse",
       accent: "neon-green",
-      image: "/images/team/yousuf.jpg",
+      image: "https://res.cloudinary.com/dxkje9whm/image/upload/v1758892593/yousuf_n1xsid.jpg",
       gender: "male"
     },
     {
@@ -101,6 +101,24 @@ export default function Team() {
     {
       name: "Tapojoyti Mukherjee",
       expertise: "Web Development",
+      linkedin: "https://linkedin.com/in/",
+      github: "https://github.com/",
+      accent: "electric",
+      image: "",
+      gender: "male"
+    },
+    {
+      name: "Gulam Hasnain Raza",
+      expertise: "Web development",
+      linkedin: "https://linkedin.com/in/",
+      github: "https://github.com/",
+      accent: "electric",
+      image: "https://res.cloudinary.com/dxkje9whm/image/upload/v1758994011/hasnain_s3akfj.jpg",
+      gender: "male"
+    },
+     {
+      name: "Saikat Kar",
+      expertise: "Blockchain",
       linkedin: "https://linkedin.com/in/",
       github: "https://github.com/",
       accent: "electric",
