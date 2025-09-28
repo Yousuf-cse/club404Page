@@ -18,7 +18,7 @@ export default function Team() {
       gender: "male"
     },
     {
-      name: "Rezaul Hossain",
+      name: "Razaul Shoaib",
       expertise: "Hardware",
       linkedin: "https://www.linkedin.com/in/razaul-shoaib-ba192b330/",
       github: "https://github.com/",
